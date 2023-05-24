@@ -84,6 +84,7 @@ public class CalculatorTest {
            int actual = cal.divide(a, b);
            int expected = 0;
            assertEquals(expected, actual);
+           
     }
 		
 	
@@ -94,11 +95,6 @@ public class CalculatorTest {
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Test
-	public void test() {
-		//fail("Not yet implemented");
 	}
 
 }
