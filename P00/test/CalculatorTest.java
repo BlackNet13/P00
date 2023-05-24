@@ -12,10 +12,6 @@ public class CalculatorTest {
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
 	@Before
 	public void setUp() throws Exception {		
 	}
@@ -45,7 +41,7 @@ public class CalculatorTest {
 		int actual = cal.subtract(a, b);
 		
 		int expected = 5555;
-		assertEquals(actual, expected);
+		assertEquals(expected, actual);
 		
 	}
 	
@@ -59,7 +55,7 @@ public class CalculatorTest {
 		int actual = cal.multiply(a, b);
 		
 		int expected = 200;
-		assertEquals(actual,expected);
+		assertEquals(expected,actual);
 		
 		
 	}
@@ -68,14 +64,14 @@ public class CalculatorTest {
 	@Test
 	public void testDivide() {
 		
-		int a = 20;
+		int a = 20; //arrange/setting
 		int b = 10;
 		
 		Calculator cal = new Calculator();
-		int actual = cal.divide(a, b);
+		int actual = cal.divide(a, b);  //act/run method
 		
 		int expected = 2;
-		assertEquals(actual,expected);
+		assertEquals(expected,actual); //assert
 		
 	}
 	
@@ -87,13 +83,17 @@ public class CalculatorTest {
            Calculator cal = new Calculator();
            int actual = cal.divide(a, b);
            int expected = 0;
-           assertEquals(actual, expected);
+           assertEquals(expected, actual);
     }
 		
 	
 
 	@After
 	public void tearDown() throws Exception {
+	}
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
 	}
 
 	@Test
