@@ -64,26 +64,26 @@ public class CalculatorTest {
 	@Test
 	public void testDivide() {
 		
-		int a = 20; //arrange/setting
-		int b = 10;
+		double a = 10; //arrange/setting
+		double b = 20;
 		
 		Calculator cal = new Calculator();
-		int actual = cal.divide(a, b);  //act/run method
+		double actual = cal.divide(a, b);  //act/run method
 		
-		int expected = 2;
-		assertEquals(expected,actual); //assert
+		double expected = 0.5;
+		assertEquals(expected,actual,0.1); //assert
 		
 	}
 	
 	@Test(expected=java.lang.ArithmeticException.class) //testing for zero denominator
     public void testDivideByZero() {
-           int a =20;
-           int b = 0;
+           double a =20;
+           double b = 0;
           
            Calculator cal = new Calculator();
-           int actual = cal.divide(a, b);
-           int expected = 0;
-           assertEquals(expected, actual);
+           double actual = cal.divide(a, b);
+           double expected = 0;
+           assertEquals(expected, actual,0.1);
            
     }
 		
